@@ -3,6 +3,7 @@ title: Blocks
 description: An overview of blocks in the Ethereum blockchain – their data structure, why they're needed, and how they're made.
 lang: en
 sidebar: true
+preMergeBanner: true
 ---
 
 Blocks are batches of transactions with a hash of the previous block in the chain. This links blocks together (in a chain) because hashes are cryptographically derived from the block data. This prevents fraud, because one change in any block in history would invalidate all the following blocks as all subsequent hashes would change and everyone running the blockchain would notice.
@@ -10,8 +11,6 @@ Blocks are batches of transactions with a hash of the previous block in the chai
 ## Prerequisites {#prerequisites}
 
 Blocks are a very beginner-friendly topic. But to help you better understand this page, we recommend you first read [Accounts](/developers/docs/accounts/), [Transactions](/developers/docs/transactions/), and our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
-
-<!--The content below was provided by Brian Gu with exception of "what's in a block"-->
 
 ## Why blocks? {#why-blocks}
 
@@ -26,15 +25,15 @@ By spacing out commits, we give all network participants enough time to come to 
 
 To preserve the transaction history, blocks are strictly ordered (every new block created contains a reference to its parent block), and transactions within blocks are strictly ordered as well. Except in rare cases, at any given time, all participants on the network are in agreement on the exact number and history of blocks, and are working to batch the current live transaction requests into the next block.
 
-Once a block is put together (mined) by some miner on the network, it is propagated to the rest of the network; all nodes add this block to the end of their blockchain, and mining continues. The exact block-assembly (mining) process and commitment/consensus process is currently specified by Ethereum’s “Proof-of-Work” protocol.
+Once a block is put together (mined) by some miner on the network, it is propagated to the rest of the network; all nodes add this block to the end of their blockchain, and mining continues. The exact block-assembly (mining) process and commitment/consensus process is currently specified by Ethereum’s “proof-of-work” protocol.
 
 ### A visual demo {#a-visual-demo}
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="_160oMzblY8" />
 
-## Proof of work protocol {#proof-of-work-protocol}
+## Proof-of-work protocol {#proof-of-work-protocol}
 
-Proof of work means the following:
+Proof-of-work means the following:
 
 - Mining nodes have to spend a variable but substantial amount of energy, time, and computational power to produce a “certificate of legitimacy” for a block they propose to the network. This helps protect the network from spam/denial-of-service attacks, among other things, since certificates are expensive to produce.
 - Other miners who hear about a new block with a valid certificate of legitimacy must accept the new block as the canonical next block on the blockchain.
@@ -52,7 +51,11 @@ Proof of work means the following:
 - `parentHash` – the unique identifier for the block that came before (this is how blocks are linked in a chain).
 - `transactions` – the transactions included in the block.
 - `stateRoot` – the entire state of the system: account balances, contract storage, contract code and account nonces are inside.
-- `nonce` – a hash that, when combined with the mixHash, proves that the block has gone through [proof of work](/developers/docs/consensus-mechanisms/pow/).
+- `nonce` – a hash that, when combined with the mixHash, proves that the block has gone through [proof-of-work](/developers/docs/consensus-mechanisms/pow/).
+
+## Block time {#block-time}
+
+Block time refers to the time it takes to mine a new block. In Ethereum, the average block time is between 12 to 14 seconds and is evaluated after each block. The expected block time is set as a constant at the protocol level and is used to protect the network's security when the miners add more computational power. The average block time gets compared with the expected block time, and if the average block time is higher, then the difficulty is decreased in the block header. If the average block time is smaller, then the difficulty in the block header will be increased.
 
 ## Block size {#block-size}
 

@@ -3,6 +3,7 @@ title: Intro to Ethereum
 description: A dapp developer's introduction to the core concepts of Ethereum.
 lang: en
 sidebar: true
+preMergeBanner: true
 ---
 
 ## What is a blockchain? {#what-is-a-blockchain}
@@ -19,17 +20,17 @@ Ethereum currently uses a [proof-of-work](/developers/docs/consensus-mechanisms/
 
 New blocks are broadcast to the nodes in the network, checked and verified, thus updating the state of the blockchain for everyone.
 
-So to summarise, when you send ETH to someone, the transaction must be mined and included in a new block. The updated state is then shared with the entire network.
+So to summarize, when you send ETH to someone, the transaction must be added to the block which will get mined. The updated state is then shared with the entire network.
 
 Watch Austin walk you through blockchains:
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="zcX7OJ-L8XQ" />
 
 If you want to see how blockchain hashes data and then the previous block references all the past blocks, be sure to check out [this demo](https://andersbrownworth.com/blockchain/blockchain) by Anders Brownworth and watch the accompanying video below.
 
 Watch Anders explain hashes in blockchains:
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="_160oMzblY8" />
 
 ## What is Ethereum? {#what-is-ethereum}
 
@@ -41,7 +42,7 @@ Cryptographic mechanisms ensure that once transactions are verified as valid and
 
 ## What is ether? {#what-is-ether}
 
-The purpose of ether, the cryptocurrency, is to allow for a market for computation. Such a market provides an economic incentive for participants to verify and execute transaction requests and provide computational resources to the network.
+**Ether (ETH)** is the native cryptocurrency of Ethereum. The purpose of ether is to allow for a market for computation. Such a market provides an economic incentive for participants to verify and execute transaction requests and provide computational resources to the network.
 
 Any participant who broadcasts a transaction request must also offer some amount of ether to the network as a bounty. This bounty will be awarded to whoever eventually does the work of verifying the transaction, executing it, committing it to the blockchain, and broadcasting it to the network.
 
@@ -49,9 +50,9 @@ The amount of ether paid corresponds to the time required to do the computation.
 
 ## What are smart contracts? {#what-are-smart-contracts}
 
-In practice, participants don't write new code every time they want to request a computation on the EVM. Rather, application developers upload programs (reusable snippets of code) into EVM storage, and users make requests to execute these code snippets with varying parameters. We call the programs uploaded to and executed by the network smart contracts.
+In practice, participants don't write new code every time they want to request a computation on the EVM. Rather, application developers upload programs (reusable snippets of code) into EVM state, and users make requests to execute these code snippets with varying parameters. We call the programs uploaded to and executed by the network smart contracts.
 
-At a very basic level, you can think of a smart contract like a sort of vending machine: a script that, when called with certain parameters, performs some actions or computation if certain conditions are satisfied. For example, a simple vendor smart contract could create and assign ownership of a digital asset if the caller sends ether to a specific recipient.
+At a very basic level, you can think of a smart contract like a sort of vending machine: a script that, when called with certain parameters, performs some actions or computation if certain conditions are satisfied. For example, a simple vendor smart contract could create and assign ownership of a digital asset if the caller sends ETH to a specific recipient.
 
 Any developer can create a smart contract and make it public to the network, using the blockchain as its data layer, for a fee paid to the network. Any user can then call the smart contract to execute its code, again for a fee paid to the network.
 
@@ -61,11 +62,13 @@ Thus, with smart contracts, developers can build and deploy arbitrarily complex 
 
 ### Blockchain {#blockchain}
 
-The sequence of all blocks that have been committed to the Ethereum network in the history of the network. So-named because each block contains a reference to the previous block, which helps us maintain an ordering over all blocks (and thus over the precise history).
+The sequence of all blocks that have been committed to the Ethereum network in the history of the network. So named because each block contains a reference to the previous block, which helps us maintain an ordering over all blocks (and thus over the precise history).
 
 ### ETH {#eth}
 
-The native cryptocurrency of Ethereum. Users pay ether to other users to have their code execution requests fulfilled.
+**Ether (ETH)** is the native cryptocurrency of Ethereum. Users pay ETH to other users to have their code execution requests fulfilled.
+
+[More on ETH](/developers/docs/intro-to-ether/)
 
 ### EVM {#evm}
 
@@ -81,7 +84,7 @@ The real-life machines which are storing the EVM state. Nodes communicate with e
 
 ### Accounts {#accounts}
 
-Where ether is stored. Users can initialize accounts, deposit ether into the accounts, and transfer ether from their accounts to other users. Accounts and account balances are stored in a big table in the EVM; they are a part of the overall EVM state.
+Where ETH is stored. Users can initialize accounts, deposit ETH into the accounts, and transfer ETH from their accounts to other users. Accounts and account balances are stored in a big table in the EVM; they are a part of the overall EVM state.
 
 [More on accounts](/developers/docs/accounts/)
 
@@ -89,8 +92,8 @@ Where ether is stored. Users can initialize accounts, deposit ether into the acc
 
 A "transaction request" is the formal term for a request for code execution on the EVM, and a "transaction" is a fulfilled transaction request and the associated change in the EVM state. Any user can broadcast a transaction request to the network from a node. For the transaction request to affect the agreed-upon EVM state, it must be validated, executed, and "committed to the network" by another node. Execution of any code causes a state change in the EVM; upon commitment, this state change is broadcast to all nodes in the network. Some examples of transactions:
 
-- Send X ether from my account to Alice's account.
-- Publish some smart contract code into EVM memory.
+- Send X ETH from my account to Alice's account.
+- Publish some smart contract code into EVM state.
 - Execute the code of the smart contract at address X in the EVM, with arguments Y.
 
 [More on transactions](/developers/docs/transactions/)
@@ -103,7 +106,7 @@ The volume of transactions is very high, so transactions are "committed" in batc
 
 ### Smart contracts {#smart-contracts}
 
-A reusable snippet of code (a program) which a developer publishes into EVM memory. Anyone can request that the smart contract code be executed by making a transaction request. Because developers can write arbitrary executable applications into the EVM (games, marketplaces, financial instruments, etc.) by publishing smart contracts, these are often also called [dapps, or Decentralized Apps](/developers/docs/dapps/).
+A reusable snippet of code (a program) which a developer publishes into EVM state. Anyone can request that the smart contract code be executed by making a transaction request. Because developers can write arbitrary executable applications into the EVM (games, marketplaces, financial instruments, etc.) by publishing smart contracts, these are often also called [dapps, or Decentralized Apps](/developers/docs/dapps/).
 
 [More on smart contracts](/developers/docs/smart-contracts/)
 
@@ -116,4 +119,4 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related tutorials {#related-tutorials}
 
-- [A developer's guide to Ethereum, part 1 ](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– A very beginner-friendly exploration of Ethereum using Python and web3.py_
+- [A developer's guide to Ethereum, part 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– A very beginner-friendly exploration of Ethereum using Python and web3.py_

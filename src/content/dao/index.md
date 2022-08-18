@@ -7,32 +7,29 @@ emoji: ":handshake:"
 sidebar: true
 sidebarDepth: 2
 image: ../../assets/use-cases/dao-2.png
-alt: "A representation of a DAO voting on a proposal."
-summaryPoints:
-  [
-    "Member-owned communities without centralized leadership.",
-    "A safe way to collaborate with internet strangers.",
-    "A safe place to commit funds to a specific cause.",
-  ]
+alt: A representation of a DAO voting on a proposal.
+summaryPoint1: Member-owned communities without centralized leadership.
+summaryPoint2: A safe way to collaborate with internet strangers.
+summaryPoint3: A safe place to commit funds to a specific cause.
 ---
 
 ## What are DAOs? {#what-are-daos}
 
 DAOs are an effective and safe way to work with like-minded folks around the globe.
 
-Think of them like an internet-native business that's collectively owned and managed by its members. They have built-in treasuries that no one has the authority to access without the approval of the group. Decisions are governed by proposals and voting to ensure everyone in the organisation has a voice.
+Think of them like an internet-native business that's collectively owned and managed by its members. They have built-in treasuries that no one has the authority to access without the approval of the group. Decisions are governed by proposals and voting to ensure everyone in the organization has a voice.
 
-There's no CEO who can authorise spending based on their own whims and no chance of a dodgy CFO manipulating the books. Everything is out in the open and the rules around spending are baked into the DAO via its code.
+There's no CEO who can authorize spending based on their own whims and no chance of a dodgy CFO manipulating the books. Everything is out in the open and the rules around spending are baked into the DAO via its code.
 
 ## Why do we need DAOs? {#why-dao}
 
-Starting an organisation with someone that involves funding and money requires a lot of trust in the people you're working with. But it’s hard to trust someone you’ve only ever interacted with on the internet. With DAOs you don’t need to trust anyone else in the group, just the DAO’s code, which is 100% transparent and verifiable by anyone.
+Starting an organization with someone that involves funding and money requires a lot of trust in the people you're working with. But it’s hard to trust someone you’ve only ever interacted with on the internet. With DAOs you don’t need to trust anyone else in the group, just the DAO’s code, which is 100% transparent and verifiable by anyone.
 
 This opens up so many new opportunities for global collaboration and coordination.
 
 ### A comparison {#dao-comparison}
 
-| DAO                                                                                                                     | A traditional organisation                                                                       |
+| DAO                                                                                                                     | A traditional organization                                                                       |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | Usually flat, and fully democratized.                                                                                   | Usually hierarchical.                                                                            |
 | Voting required by members for any changes to be implemented.                                                           | Depending on structure, changes can be demanded from a sole party, or voting may be offered.     |
@@ -54,7 +51,7 @@ There are different models for DAO membership. Membership can determine how voti
 
 ### Token-based membership {#token-based-membership}
 
-Usually fully permissionless, depending on the token used. Mostly these governance tokens can be traded for permissionlessly on a decentralized exchange. Others must be earned through providing liquidity or some other ‘proof of work’. Either way, simply holding the token grants access to voting.
+Usually fully permissionless, depending on the token used. Mostly these governance tokens can be traded permissionlessly on a decentralized exchange. Others must be earned through providing liquidity or some other ‘proof-of-work’. Either way, simply holding the token grants access to voting.
 
 _Typically used to govern broad decentralized protocols and/or tokens themselves._
 
@@ -64,7 +61,7 @@ _Typically used to govern broad decentralized protocols and/or tokens themselves
 
 ### Share-based membership {#share-based-membership}
 
-Share-based DAOs are more permissioned, but still quite open. Any prospective members can submit a proposal to join the DAO, usually offering tribute of some value in the form of tokens or work. Shares represent direct voting power and ownership. Members can exit at anytime with their proportionate share of the treasury.
+Share-based DAOs are more permissioned, but still quite open. Any prospective members can submit a proposal to join the DAO, usually offering a tribute of some value in the form of tokens or work. Shares represent direct voting power and ownership. Members can exit at any time with their proportionate share of the treasury.
 
 _Typically used for more closer-knit, human-centric organizations like charities, worker collectives, and investment clubs. Can also govern protocols and tokens as well._
 
@@ -72,13 +69,25 @@ _Typically used for more closer-knit, human-centric organizations like charities
 
 [MolochDAO](http://molochdao.com/) – MolochDAO is focused on funding Ethereum projects. They require a proposal for membership so the group can assess whether you have the necessary expertise and capital to make informed judgments about potential grantees. You can't just buy access to the DAO on the open market.
 
+### Reputation-based membership {#reputation-based-membership}
+
+Reputation represents proof of participation and grants voting power in the DAO. Unlike token or share-based membership, reputation-based DAOs don't transfer ownership to contributors. Reputation cannot be bought, transferred or delegated; DAO members must earn reputation through participation. On-chain voting is permissionless and prospective members can freely submit proposals to join the DAO and request to receive reputation and tokens as a reward in exchange for their contributions.
+
+_Typically used for decentralized development and governance of protocols and dapps, but also well suited to a diverse set of organizations like charities, worker collectives, investment clubs, etc._
+
+#### A famous example {#reputation-example}
+
+[DXdao](https://DXdao.eth.link) – DXdao is a global sovereign collective building and governing decentralized protocols and applications since 2019. It leverages reputation-based governance and holographic consensus to coordinate and manage funds, meaning no one can buy their way into influencing its future.
+
 ## How do DAOs work? {#how-daos-work}
 
-The backbone of a DAO is its smart contract. The contract defines the rules of the organisation and holds the group's treasury. Once the contract is live on Ethereum, no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead the group makes decisions collectively and payments are authorised automatically when votes pass.
+The backbone of a DAO is its smart contract. The contract defines the rules of the organization and holds the group's treasury. Once the contract is live on Ethereum, no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead, the group makes decisions collectively, and payments are automatically authorized when votes pass.
 
 This is possible because smart contracts are tamper-proof once they go live on Ethereum. You can't just edit the code (the DAOs rules) without people noticing because everything is public.
 
-<DocLink to="/developers/docs/smart-contracts/" title="More on smart contracts" />
+<DocLink to="/smart-contracts/">
+  More on smart contracts
+</DocLink>
 
 ## Ethereum and DAOs {#ethereum-and-daos}
 
@@ -93,7 +102,7 @@ Ethereum is the perfect foundation for DAOs for a number of reasons:
 
 ### Join a DAO {#join-a-dao}
 
-- [Ethereum community DAOs](/community/#decentralized-autonomous-organizations-daos/community/#decentralized-autonomous-organizations-daos)
+- [Ethereum community DAOs](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [DAOHaus's list of DAOs](https://app.daohaus.club/explore)
 
 ### Start a DAO {#start-a-dao}
@@ -101,7 +110,7 @@ Ethereum is the perfect foundation for DAOs for a number of reasons:
 - [Summon a DAO with DAOHaus](https://app.daohaus.club/summon)
 - [Create an Aragon-powered DAO](https://aragon.org/product)
 - [Start a colony](https://colony.io/)
-- [Build a DAO with DAOstack](https://daostack.io/)
+- [Create a DAO with DAOstack's holographic consensus](https://alchemy.daostack.io/daos/create)
 
 ## Further reading {#further-reading}
 
@@ -112,6 +121,7 @@ Ethereum is the perfect foundation for DAOs for a number of reasons:
 - [What is a DAO and what is it for?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [How to Start a DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [What is a DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
+- [What is Holographic Consensus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
 
 ### Videos {#videos}
 

@@ -3,7 +3,6 @@ title: Consensus mechanisms
 description: An explanation of consensus protocols in distributed systems and the role they play in Ethereum.
 lang: en
 sidebar: true
-incomplete: true
 ---
 
 When it comes to blockchains like Ethereum, which are, in essence, distributed databases, the network's nodes must reach an agreement on the network's current state. This agreement is achieved using consensus mechanisms.
@@ -16,37 +15,23 @@ To better understand this page, we recommend you first read our [introduction to
 
 ## What is consensus? {#what-is-consensus}
 
-By consensus, we mean that a general agreement has been reached. Consider a group of five people going to the cinema. If three out of five agree on a film, a consensus is achieved — majority rules.
+By consensus, we mean that a general agreement has been reached. Consider a group of people going to the cinema. If there is not a disagreement on a proposed choice of film, then a consensus is achieved. In the extreme case the group will eventually split.
 
-In regards to blockchain, reaching consensus means that at least 51% of the nodes on the network agree on the next global state of the network.
+In regards to blockchain, the process is formalized, and reaching consensus means that at least 51% of the nodes on the network agree on the next global state of the network.
 
 ## What is a consensus mechanism? {#what-is-a-consensus-mechanism}
 
 Consensus mechanisms (also known as consensus protocols or consensus algorithms) allow distributed systems (networks of computers) to work together and stay secure.
 
+Consensus protocols and consensus algorithms are often used interchangeably. However, protocols and algorithms are different. A protocol is a set of rules defined in a standard that governs how a system and its many functioning parts operate and interact. Algorithms are like exact recipes on how to solve a problem or calculate a result.
+
 For decades, these mechanisms have been used to establish consensus among database nodes, application servers, and other enterprise infrastructure. In recent years, new consensus mechanisms have been invented to allow cryptoeconomic systems, such as Ethereum, to agree on the state of the network.
 
 A consensus mechanism in a cryptoeconomic system also helps prevent certain kinds of economic attacks. In theory, an attacker can compromise consensus by controlling 51% of the network. Consensus mechanisms are designed to make this "51% attack" unfeasible. Different mechanisms are engineered to solve this security problem in different ways.
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/dylgwcPH4EA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<!-- ### Consensus -->
-
-<!-- Formal requirements for a consensus protocol may include: -->
-
-<!-- - Agreement: All correct processes must agree on the same value. -->
-<!-- - Weak validity: For each correct process, its output must be the input of some correct process. -->
-<!-- - Strong validity: If all correct processes receive the same input value, then they must all output that value. -->
-<!-- - Termination: All processes must eventually decide on an output value -->
-
-<!-- ### Fault tolerance -->
-<!-- TODO explain how protocols must be fault tolerant -->
+<YouTube id="dylgwcPH4EA" />
 
 ## Types of consensus mechanisms {#types-of-consensus-mechanisms}
-
-<!-- TODO -->
-<!-- Why do different consensus protocols exist? -->
-<!-- What are the tradeoffs of each? -->
 
 ### Proof-of-work {#proof-of-work}
 
@@ -54,7 +39,7 @@ Ethereum, like Bitcoin, currently uses a **proof-of-work (PoW)** consensus proto
 
 #### Block creation {#pow-block-creation}
 
-Proof-of-work is done by [miners](/developers/docs/consensus-mechanisms/pow/mining/), who compete to create new blocks full of processed transactions. The winner shares the new block with the rest of the network and earns some freshly minted ETH. The race is won by whosever computer can solve a math puzzle fastest – this produces the cryptographic link between the current block and the block that went before. Solving this puzzle is the work in "proof-of-work".
+Proof-of-work is done by [miners](/developers/docs/consensus-mechanisms/pow/mining/), who compete to create new blocks full of processed transactions. The winner shares the new block with the rest of the network and earns some freshly minted ETH. The race is won by the computer which is able to solve a math puzzle fastest – this produces the cryptographic link between the current block and the block that went before. Solving this puzzle is the work in "proof-of-work".
 
 #### Security {#pow-security}
 
@@ -64,7 +49,7 @@ More on [proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 
 ### Proof-of-stake {#proof-of-stake}
 
-Ethereum has plans to upgrade to a **proof-of-stake (PoS)** consensus protocol.
+Ethereum plans to upgrade to a **proof-of-stake (PoS)** consensus protocol.
 
 #### Block creation {#pos-block-creation}
 
@@ -80,19 +65,19 @@ More on [proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 
 Watch more on the different types of consensus mechanisms used on Ethereum:
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/ojxfbN78WFQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="ojxfbN78WFQ" />
 
 ### Sybil resistance & chain selection {#sybil-chain}
 
 Now technically, proof-of-work and proof-of-stake are not consensus protocols by themselves, but they are often referred to as such for simplicity. They are actually Sybil resistance mechanisms and block author selectors; they are a way to decide who is the author of the latest block. It's this Sybil resistance mechanism combined with a chain selection rule that makes up a true consensus mechanism.
 
-**Sybil resistance** measures how a protocol fares against a [Sybil attack](https://en.wikipedia.org/wiki/Sybil_attack). Sybil attacks are when one user or group pretends to be many users. Resistance to this type of attack is essential for a decentralized blockchain and enables miners and validators to be rewarded equally based on resources put in. Proof-of-work and proof-of-stake protect against this by making users expend a lot of energy or put up a lot of collateral. These protections are an economic deterrent to Sybil attacks.
+**Sybil resistance** measures how a protocol fares against a [Sybil attack](https://wikipedia.org/wiki/Sybil_attack). Sybil attacks are when one user or group pretends to be many users. Resistance to this type of attack is essential for a decentralized blockchain and enables miners and validators to be rewarded equally based on resources put in. Proof-of-work and proof-of-stake protect against this by making users expend a lot of energy or put up a lot of collateral. These protections are an economic deterrent to Sybil attacks.
 
 A **chain selection rule** is used to decide which chain is the "correct" chain. Ethereum and Bitcoin currently use the "longest chain" rule, which means that whichever blockchain is the longest will be the one the rest of the nodes accept as valid and work with. For proof-of-work chains, the longest chain is determined by the chain's total cumulative proof-of-work difficulty.
 
 The combination of proof-of-work and longest chain rule is known as "Nakamoto Consensus."
 
-Eth2 (the [beacon chain](/eth2/beacon-chain/)) uses a consensus mechanism called [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), which is proof-of-stake based.
+The [Beacon Chain](/upgrades/beacon-chain/) uses a consensus mechanism called [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), which is proof-of-stake based.
 
 ## Further reading {#further-reading}
 
@@ -100,11 +85,12 @@ Eth2 (the [beacon chain](/eth2/beacon-chain/)) uses a consensus mechanism called
 - [What is Nakamoto Consensus? Complete Beginner’s Guide](https://blockonomi.com/nakamoto-consensus/)
 - [How Does Casper work?](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [On the Security and Performance of Proof of Work Blockchains](https://eprint.iacr.org/2016/555.pdf)
+- [Byzantine fault](https://en.wikipedia.org/wiki/Byzantine_fault)
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
 
-- [Proof of work](/developers/docs/consensus-mechanisms/pow/)
+- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Proof of stake](/developers/docs/consensus-mechanisms/pos/)
+- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)

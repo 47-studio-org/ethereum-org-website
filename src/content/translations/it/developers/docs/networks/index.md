@@ -11,7 +11,7 @@ Le reti sono ambienti Ethereum diversi ai quali si può accedere per sviluppare,
 
 ## Prerequisiti {#prerequisites}
 
-È consigliabile conoscere le basi di Ethereum prima di informarsi sulle diverse reti. Le reti di test rappresentano una versione semplificata e sicura di Ethereum nella quale è possibile sperimentare. Consulta la nostra [introduzione ad Ethereum](/en/developers/docs/intro-to-ethereum/).
+È consigliabile conoscere le basi di Ethereum prima di informarsi sulle diverse reti. Le reti di test rappresentano una versione semplificata e sicura di Ethereum nella quale è possibile sperimentare. Consulta la nostra [introduzione ad Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Reti pubbliche {#public-networks}
 
@@ -58,7 +58,7 @@ Gli ETH sulle reti di prova non hanno valore reale, quindi non c'è un mercato p
 
 ## Reti private {#private-networks}
 
-Una rete Ethereum è una rete privata se i relativi nodi non sono collegati a una rete pubblica (ad esempio la rete principale o una rete di prova). In questo contesto, privato significa solo riservato o isolato, e non protetto o sicuro.
+Una rete di Ethereum è una rete privata se i relativi noti non sono connessi a una rete pubblica (es. Mainnet o una testnet). In questo contesto, privato significa solo riservato o isolato, e non protetto o sicuro.
 
 ### Reti di sviluppo {#development-networks}
 
@@ -72,20 +72,11 @@ Il processo di consenso è controllato da un set di nodi predefinito considerati
 
 Se una rete Ethereum pubblica è come la rete Internet pubblica, un consorzio può essere paragonato a una Intranet privata.
 
-<!-- TODO
+## Strumenti correlati {#related-tools}
 
-## Interacting with testnets
+- [Chainlist](https://chainlist.org/) _Elenco di reti EVM per connettere portafogli e fornitori all'ID della Catena e ID di Rete appropriati._
+- [Catene basate su EVM](https://github.com/ethereum-lists/chains) _Repository di GitHub di metadati della catena che alimentano Chainlist._
 
-### Your own local network {#your-own-local-network}
+## Lettura consigliate {#further-reading}
 
-`geth -—networkid="12345" console`
-
-### Testnets {#testnets-1}
-
-Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH.
-
--->
-
-## Letture consigliate {#further-reading}
-
-_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
